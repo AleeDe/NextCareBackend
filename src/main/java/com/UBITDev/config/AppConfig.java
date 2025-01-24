@@ -39,6 +39,7 @@ public class AppConfig {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
+        configuration.addAllowedOrigin("http://localhost:5173/");
         configuration.addAllowedOrigin("https://nextcare-phi.vercel.app/");
 
         configuration.addAllowedMethod("*"); // Allow all HTTP methods
